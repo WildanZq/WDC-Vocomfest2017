@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/2.jpg)"></div>
+            <div class="artikel">
+                <h1>Adab Bertamu dan Menerima Tamu<div class="hLine"></div></h1>
+                <a class="author">Wildan</a>
+                <span class="date">18-03-2017</span>
+                <p>&emsp;Orang yang memiliki sikap yang baik atau akhlakul karimah pasti bersikap sesuai adab saat bertamu ataupun menerima tamu. </p>
+                    <img src="../../images/artikel/2/1.jpg">
+                <h2><p>&emsp;<b>Adab Bertamu</b></p></h2>
+                <p>&emsp;Ada beberapa adab atau tatacara bertamu diantaranya yaitu :</p>
+                <ol>
+                    <li><b>Berpaiakaian Rapi dan Pantas</b>
+                        <p>Walaupun sepele, berpakain pantas saat bertamu berarti menghormati tuan rumah dan dirinya sendiri.</p>
+                    <li><b>Memberikan Isyarat dan Salam ketika Hendak Bertamu</b>
+                        <p>Sebelum kita masuk kedalam rumah orang lain atau bertamu , hendaknya kita mengucapkan salam terlebih dahulu.</p>
+                    <li><b>Jangan Mengintip ke Dalam Rumah</b>
+                        <p>Sebelum kita di perbolekan untuk masuk ke dalam rumah seseorang , maka kita jangan mengintip.</p>
+                    <li><b>Meminta Izin Masuk Maksimal Sebanyak 3 Kali</b>
+                        <p>Apabila kita bertamu sudah tiga kali meminta izin tapi tidak ada jawaban dari tuan rumah maka hendaknya pulang dan kembali lagi di waktu lain.</p>
+                    <li><b>Memperkenalkan Diri Kepada Tuan Rumah</b>
+                        <p>Hal ini menguatkan bahwa jadi seorang  tamu hendaknya menyebutkan nama dirinya secara jelas sehingga tuan rumah tidak ragu lagi untuk menerima kedatangannya.</p>
+                    <li><b>Tamu Laki-Laki Dilarang Masuk Apabila Tuan Rumah Hanya Seorang Wanita</b>
+                        <p>Agar tidak menimbulkan dan timbul prasangka tidak baik maka janganlah masuk rumah yang hanya dihuni oleh seorang wanita.</p>
+                    <li><b>Masuk Lalu Duduk Dengan Sopan</b>
+
+                    <li><b>Menerima Semua Jamuan Tuan Rumah dengan Senang Hati</b>
+
+                    <li><b>Segeralah Pulang Apabila Telah Selesai Urusan</b>
+                        <p>Seorang tamu yang bijaksana , tidak memperpanjang kunjungannya apabila keperluannya sudah selesai.</p>
+                    <li><b>Lama waktu kunjungan yaitu paling lama 3 hari tiga malam , apabila tempat tinggalnya jauh</b>
+                </ol>
+                <h2><p>&emsp;<b>Adab Menerima Tamu</b></p></h2>
+                <p>&emsp;Selain bertamu kita apabila menjadi tuan rumah atau menerima tamu juga harus mengetahui bagaimana tatacara atau adab dalam menerima tamu , tujuannya yaitu tidak hanya supaya tamu yang datang merasa nyaman juga untuk menjaga kehormatan kita .</p>
+                <img src="../../images/artikel/2/2.jpg">
+                <p>&emsp;Adab menerima tamu yaitu :</p>
+                <ol>
+                    <li><b>Berpakaian yang Pantas</b>
+                        <p>Berpakaian yang pantas bukan berarti menggunakan pakaian yang bagus , akan tetapi cukup sopan dan enak di pandang .Berpakaian yang rapi saat menerima tamu berarti menghormati tamu dan diri sendiri.</p>
+                    <li><b>Saat Menerima Kedatangan Tamu Harus Bersikap yang Baik</b>
+                        <p>Contoh sikap yang baik yaitu menerima tamu dengan wajah yang ceria dan murah senyum. Sikap yang harus di jauhi yaitu memalingkan muka , acuh , tidak mau memandang wajah tamu serta sikap – sikap sombong lainnya.</p>
+                    <li><b>Tidak Merepotkan Diri</b>
+                        <p>Bagi tuan rumah hendaknya menyediakan jamuan yang pantas , akan tetapi apabila tuan rumah seorang yang tidak punya maka air putih saja juga sudah cukup . Dan apabila air putih juga tidak punya maka jamulah dengan senyum dan sikap yang baik.</p>
+                    <li><b>Lama waktu sesuai dengan hak tamu yakni tiga hari tiga malam ,selebih dari waktu itu merupakan sadaqoh darinya</b>
+                        
+                    <li><b>Antarkan sampai pintu halaman jika tamu pulang.</b>
+                        
+                    <li><b>Wanita yang sendirian di rumah dilarang menerima tamu laki – laki masuk dalam rumah tanpa seizin suami</b>
+                        <p>Membiarkan tamu laki – laki masuk kedalam rumah padahal ia (wanita ) tersebut seorang sendiri sama saja membuka peluang besar akan timbulnya bahaya bagi diri sendiri dan harta harta suaminya . Serta dapat menimbulkan fitnah .</p>
+                </ol>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Joko Kala</span>
+                        <p class="komentar">Sangat Bagus Terutama untuk anak muda kita, terus dikembangkan yaa. Sukses selalu</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">19-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Kevin Mauludi</span>
+                                <p class="komentar">Setuju gan, sukses selalu ts</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">19-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

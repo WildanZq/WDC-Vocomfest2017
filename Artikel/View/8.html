@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/8.jpg)"></div>
+            <div class="artikel">
+                <h1>Menyontek, hal wajib yang harus dilakukan?<div class="hLine"></div></h1>
+                <a class="author">Wildan</a>
+                <span class="date">12-03-2017</span>
+                <p>&emsp;Budaya menyontek di Indonesia memang sudah menjadi hal yang tidak tabu lagi dan dianggap sebagai kebiasaan yang wajar-wajar saja karena tidak jelas hukumnya. Di Indonesia juga sepertinya sudah terbiasa menyontek dengan bermacam-macam cara.</p>
+                <p>&emsp;Yang kita tahu menyontek di Indonesia tidak jelas hukumnya. Seolah-olah seperti kebiasaan yang wajar. Hukum menyontek cuma diterapkan pada diri guru atau dosen yang mengajar di kelas, tidak sepenuhnya dari pihak sekolah. Bahkan hukum merokok bagi pelajar atau mahasiswa di sekolah pun bisa sedikit mengantisipasi agar siswa atau mahasiswa tidak merokok karena hukumnya itu sangat berat. misalnya dipanggil orang tua agar siswa sendiri merasa malu dan sadar tidak merokok lagi. Seharusnya hukum menyontek juga begitu.</p>
+                <p>&emsp;Seharusnya guru mempunyai peranan penting untuk mengatasi budaya menyontek ini karena kebanyakan guru itu hanya menerapkan kepentingan semata. Ada dua jenis guru di sekolah. Salah satunya yang benar-benar beridelisme anti menyontek dan ada pula yang menerapkan kepentingan sekolah agar menjaga reputasinya. Jadi guru itu membiarkan siswanya menyontek agar prestasi sekolahnya terjaga. Karena menyontek salah satu bagian dari korupsi, sepertinya budaya tersebut sudah menjadi trend di kalangan masyarakat.</p>
+                <img src="../../images/artikel/8/1.jpg">
+                <p>&emsp;Manusia-manusia yang hidupnya penuh dengan menyontek, kreatifitas dalam dirinya bakal terhambat. Apalagi dilakukan sejak dini, akan menambah rusaknya diri seeorang. Penuh dengan rasa malas, putus asa, dan tidak bertanggung jawab. Semua yang diraihnya tidak halal karena kecurangan dan kelicikan yang dilakukan. Yang lebih parah adalah reputasi diri akan buruk di mata sosial, sedangkan baiknya tidak ada. Malah hanya membuat kita semakin terperosok ke dalam kebodohan.</p>
+                <p>&emsp;Bermacam-macam cara yang dilakukan untuk menyotek. Sungguh kreatifnya anak bangsa ini dalam hal menyontek. Di mana moral kita sebagai anak bangsa yang berpendidikan tinggi? Alasan yang paling umum jika menyontek: tidak belajar. Banyak siswa yang tidak belajar mengaku "Lupa" akan materi soal yang diberikan. Selalu menyontek akan menambah kurangnya percaya diri untuk menjawab soal. Rasa tidak yakin dan ragu-ragu akan terus menghantui karena selalu terikat, selalu percaya dengan hasil orang lain. Pengawasan saat mengerjakan soal pun menjadi faktor untuk menyontek. Kesadaran diri guru dan sekolah harus ditingkatkan dengan pengawasan yang ketat agar siswa yang menyontek ketakutan. Guru yang tegas siap memberikan resiko jika ada yang menyontek.</p>
+                <p>&emsp;Untuk mengatasi masalah menyontek banyak solusi yang dapat dicoba seperti peran orang tua adalah yang paling utama untuk mendidik anak. Kewajiban orang tua agar anaknya tidak menyontek terus diterapkan. Jikalau si anak akan mengikuti UN di sekolah, kiranya selalu mengingatkan si anak agar tidak menyontek, terus belajar di rumah agar bisa menjawab soal jika ujian.Selalu tegur jika ada teman yang menyontek. </p>
+                <p>&emsp;Hal yang sering terjadi di kalangan pelajar, yaitu dengan mengaitkan masalah persahabatan dengan tidak diberi contekan oleh teman. Intropeksi diri jika teman tidak mau memberikan contekan kepada kita karena teman sudah berusaha keras menjawab soal dengan belajar di rumah. Apa itu sebanding dengan kegiatan kita yang bermalas-malasan di rumah? </p>
+                <p>&emsp;Guru dan sekolah harus saling bekerja sama dalam memberantas budaya menyontek ini. Guru harus selalu memperingatkan siswanya agar tidak menyontek di kelas dan memberi nasehat dan motivasi. Sekolah juga harus mempersiapkan hukuman untuk siswanya yang melanggar peraturan tersebut. Kesadaran diri kalau budaya menyontek hanya merugikan diri sendiri. Banyak-banyak dengar nasehat dari orang tua, teman, dan guru di sekolah. Selalu intropeksi diri karena menyontek itu bisa menjadi sebuah kebiasaan dengan kerugian jangka panjang, dan tentunya berdampak sangat buruk bagi siapa saja yang melakukannya.</p>
+                <p>&emsp;Sedangkan dampaknya kalau budaya menyontek diterapkan, maka akan buruk di masa yang akan datang. Dulunya menyontek, setelah besar jadi koruptor dan perusak bangsa. Dulunya pergi dari rumah menuju sekolah. Setelah besar, pergi dari rumah menuju penjara. Kehidupan sosial menjadi buruk karena teman sekolah dulu bakal terus mengingat kita bahwa dulu kita sering menyontek. Itu akan terus dibawa-bawa dan dibahas ke teman-temannya yang lain untuk dijadikan bahan obrolan. Dampaknya jelas, yaitu malu. Terus percaya sama orang lain yang lebih cerdas. Kalau terus-terusan percaya sama orang, belum tahu ternyata dia menyesatkan kita. Dampaknya jelas, kalau kita gampang kena tipu. Yang terakhir adalah menjadi generasi yang gagal. Bagaimana tidak?  Kita hanya menjadi pecundang di hari tua. Tidak bisa hidup sendiri jika tidak ada orang lain di sekitar. Tidak mau berusaha mendapatkan pekerjaan, dan bisa-bisa menjadi pengangguran.  </p>
+                <p>&emsp;Jadi menyontek hanyalah prilaku yang buruk dan menyesatkan saja. Jika kita tidak bisa melepas kebiasaan itu, maka bersiaplah menjadi pecundang sejati yang hanya bisa mengandalkan orang lain. Mencontek akan menjadi budaya yang tertanam di bangsa ini. Budaya menyontek sama saja dengan menghancurkan bangsa ini secara perlahan tapi pasti</p>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Heiji Atalarik</span>
+                        <p class="komentar">Menyontek awal dari korupsi</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">13-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Genta Effendi</span>
+                                <p class="komentar">Moral anak indonesia sudah rusak</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">14-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

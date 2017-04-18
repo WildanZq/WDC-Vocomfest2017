@@ -1,0 +1,91 @@
+/*signIn start*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    animation: modal .5s;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.signIn {
+    transition: .5s;
+    width: 85%;
+    max-width: 350px;
+    height: 330px;
+    margin: auto;
+    margin-top: 25vh;
+    background: white;
+    animation: modalContent .5s cubic-bezier(.17, .47, .19, 1.16);
+    border-top: thin solid black;
+}
+
+.signinForm {
+    margin: auto;
+    padding-top: 30px;
+    animation: modal 1s;
+    max-width: 300px;
+}
+
+.signinCont {
+    max-width: 300px;
+    padding: 30px;
+    background-color: #f2f2f2;
+}
+
+.signinInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.signinForm label {
+    font-size: 1.2em;
+}
+
+.signinButton {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signinA {
+    float: right;
+    margin-top: 10px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 15px;
+    float: right;
+    background-color: #b7e7fd;
+    border-bottom: solid black;
+    border-width: thin;
+}
+
+.tabCont {
+    margin-top: -42px;
+    float: right;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tabActive {
+    background-color: white;
+    border-bottom: none;
+}
+
+.tabLine {
+    border-left: solid black;
+    border-width: thin;
+}
+
+#signupForm {
+    display: none;
+}
+/*signIn end*/

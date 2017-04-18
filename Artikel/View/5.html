@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/5.jpg)"></div>
+            <div class="artikel">
+                <h1>Mengatasi Krisis Moral yang Mengancam Generasi Muda<div class="hLine"></div></h1>
+                <a class="author">Wildan</a>
+                <span class="date">15-03-2017</span>
+                <p>&emsp;Dalam era globalisasi ini, semua informasi baik dalam bentuk  tulisan maupun visual, mudah didapatkan, yang bersifat  positif maupun  negatif. Informasi yang bersifat positif menguntungkan bagi yang dapat memanfaatkannya, namun informasi negatif apabila kita tidak siap dan tidak bisa menyikapinya,  maka dapat terjerumus kepada hal-hal yang dapat merugikan dirinya sendiri, keluarga dan negara.</p>
+                <p>&emsp;Mereka melakukan hal-hal yang dianggap sebagai gaya hidup modern atau gaya hidup budaya luar,  misalnya penyalahgunaan narkoba, mengkonsumsi minum-minuman beralkohol atau minuman oplosan (keras) yang dapat menyebabkan kematian, melakukan seks bebas, sehingga hamil di luar nikah yang berpotensi melakukan pernikahan dini ataupun melakukan aborsi, perilaku Lesbian, Gay, Biseks dan Transgender (LGBT)  sampai kepada kekerasan seksual yang disertai dengan pembunuhan.</p>
+                <p>&emsp;Akhir-akhir ini fenomena  kekerasan seksual disertai dengan pembunuhan yang  dilakukan oleh remaja maupun anak dibawah umur membuat prihatin publik di negeri ini. Publik ramai-ramai mengecam  tindakan tersebut antara lain dalam bentuk aksi dan membuat pernyataan -pernyataan  bahwa  Indonesia saat ini sudah masuk dalam darurat kekerasan seksual dan harus di selamatkan .</p>
+                <img src="../../images/artikel/5/1.jpg">
+                <p>&emsp;Atas maraknya kekerasan seksual ini sampai-sampai Presiden Jokowi  beberapa waktu lalu menyatakan kejahatan seksual terhadap anak adalah kejahatan luar biasa dan penanganannya harus luar biasa, aparat  penegak hukum harus menghukum pelaku kekerasan seksual dengan hukuman yang sangat berat, yang setinggi tingginya agar memberikan efek jera.  Pernyataan ini masih relevan karena sistem penghukuman kekerasan seksual saat ini, secara materiil maupun formil, belum memberikan keadilan bagi korban.</p>
+                <p>&emsp;Menteri Pemberdayaan Perempuan dan Perlindungan Anak Yohana Susana Yembise, mengatakan pornografi di kalangan pelajar menimbulkan keresahan tidak hanya bagi orangtua tetapi juga  masyarakat. Dari berbagai medium, telepon seluler dianggap sebagai peranti yang paling masif menjadi alat penyebaran pornografi.</p>
+                <p>&emsp;Ke depan, akan bekerja sama dengan beberapa kementerian untuk melarang pelajar membawa ponsel dan gadget ke sekolah. Pelajar seharusnya mendapat pengawasan saat berselancar internet melalui gadget, bila tidak, mereka bisa mengakses informasi yang tidak baik seperti situs video porno. Dampak ponsel pada pelajar tidak selamanya baik. Kita semua berharap anak-anak ini menjadi generasi yang berkualitas. Merekalah yang akan jadi Presiden, Menteri, Gubernur, dan orang penting lainnya, kita harus persiapkan mereka dari sekarang.</p>
+                <p>&emsp;Mantan Ketua Umum Pengurus Pusat Muhammadiyah Din Syamsuddin menilai pendekatan hukum tidak cukup untuk meredam lahirnya pelaku dan kasus kekerasan seksual terutama terhadap anak, walaupun penting untuk memberikan efek jera. Diperlukan penguatan wawasan budaya bagi masyarakat sehingga tidak membuka peluang bagi munculnya pelaku kekerasan seksual.</p>
+                <p>&emsp;Selanjutnya pemberian pendidikan keluarga, ceramah-ceramah keagamaan yang terus digencarkan, hingga pembentengan diri dengan nilai-nilai moral bisa menjadi upaya lainnya demi meredam terjadinya kekerasan seksual.</p>
+                <p>&emsp;Wakil Ketua Komnas Perempuan Budi Wahyuni mengatakan  Negara harus hadir melindungi perempuan dan anak dari kekerasan dan kejahatan seksual. Negara harus hadir lindungi perempuan dan anak-anak dengan mendorong pembahasan dan pengesahan RUU Penghapusan Kekerasan Seksual.  Draf RUU ini, sudah ada sejak tahun 2014. Naskah akademiknya pun sudah dibahas dan disusun oleh Komnas Perempuan dan koalisi organisasi perempuan.</p>
+                <p>&emsp;Anggota Fraksi PDI Perjuangan Diah Pitaloka/Ketua Divisi Kebijakan Publik Kaukus Perempuan Parlemen Indonesia mengharapkan peran negara lebih maksimal di dalam memberikan perlindungan dan rasa aman bagi perempuan dan anak. Kasus kekerasan seksual disertai pembunuhan yang menimpa Yuyun di Bengkulu membuktikan pentingnya kehadiran negara dalam memberikan perlindungan. Negara harus mengambil peran perlindungan, dan bertanggungjawab dengan adanya undang-undang yang melindungi perempuan, di tengah berkembangnya tindak kekerasan yang bukan merupakan budaya kita.</p>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Bambang Kudo</span>
+                        <p class="komentar">Indonesia sekarang mengalami degradasi moral, ijin share ya min</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">16-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Ilham Kogoro</span>
+                                <p class="komentar">Degredasi moral telah menghancurkan negara kita, ijin share juga ya min</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">16-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

@@ -1,0 +1,1 @@
+$(".balas").click(function(){$(".balasC").slideToggle();});

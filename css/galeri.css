@@ -1,0 +1,130 @@
+/*poster start*/
+.poster {
+    width: 100%;
+    margin-top: 220px;
+}
+
+.poster .container {
+    width: 90%;
+    max-width: 1100px;
+    padding-top: 70px;
+    margin: auto;
+    position: relative;
+    overflow: visible;
+}
+
+.posterLine {
+    margin: 25px 0 40px auto;
+    width: 100%;
+    max-width: 400px;
+    border: thin solid #696969;
+}
+
+.poster h1 {
+    cursor: pointer;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    padding: 0 20px;
+}
+
+.posterList {
+    margin: auto;
+    margin-top: 10px;
+    height: 430px;
+}
+
+.posterItem {
+    position: relative;
+    overflow: hidden;
+}
+
+.posterItem:hover .desc {
+    opacity: 1;
+}
+
+.posterItem .desc{
+    width: 100%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: modal .5s;
+    opacity: 0;
+}
+
+.posterItem:hover .desc .descC {
+    transform: translateY(0);
+}
+
+.posterItem .desc .descC {
+    display: table;
+    position: relative;
+    max-width: 80%;
+    transform: translateY(250%);
+    animation: descGaleri .5s;
+}
+
+.posterItem .desc .author {
+    color: #d8d8d8;
+    text-decoration: underline;
+    font-size: .85em;
+}
+
+.posterItem .desc .author:hover {
+    color: white;
+}
+
+.posterItem .desc .title {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.posterItem .desc .iconL {
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.posterItem .desc .like {
+    color: #adadad;
+    font-size: .9em;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.posterItem .desc .mediaC {
+    float: right;
+}
+
+.posterItem .mediaC .media {
+    height: 25px;
+    width: 25px;
+    background: white;
+    display: inline-block;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.posterItem .mediaC .media .icon {
+    display: block;
+    margin-top: 5px;
+    font-size: 1em;
+    text-align: center;
+    color: black;
+}
+/*owl*/
+.owl-stage {
+    margin: auto;
+}
+
+.owl-stage-outer {
+    height: 400px;
+}
+/*poster end*/

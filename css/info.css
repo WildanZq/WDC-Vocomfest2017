@@ -1,0 +1,39 @@
+/*info start*/
+.info {
+    width: 100%;
+    padding-top: 70px;
+}
+
+.info .desc {
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.info .h1 {
+    height: 43px;
+    margin-bottom: 13px;
+    position: relative;
+    text-align: center;
+    background: white;
+    z-index: 2;
+}
+
+.info h1 {
+    display: table;
+    position: relative;
+    left: -50%;
+    margin: auto;
+    background: white;
+    padding: 0 20px 0 20px;
+}
+
+.info .descLine {
+    border: thin solid #696969;
+    width: 95%;
+    max-width: 400px;
+    margin: auto;
+    transform: translateY(27px);
+}
+/*info end*/

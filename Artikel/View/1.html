@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/1.jpg)"></div>
+            <div class="artikel">
+                <h1>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!<div class="hLine"></div></h1>
+                <a class="author">Wahaz</a>
+                <span class="date">19-03-2017</span>
+                <p>&emsp;Dalam kehidupan sehari-hari etika memang sangat penting, terutama dalam berkomunikasi karena menyangkut perasaan dan juga harga diri seseorang. Oleh karena itu tentu dong kita diharapkan dapat memahami etika-etika yang ada di lingkungan sekitar kita. </p>
+                <p>&emsp;Tapi kamu tahu nggak sih guys, kalau beberapa dari kita tanpa sadar telah melakukan kesalahan dalam beretika, yang nggak kita sadari bahwa itu bisa merugikan kita, atau bahkan mengganggu orang lain.</p>
+                <p>&emsp;Kamu bisa simak ada sekitar 15 etika yang sering kita lakukan yang ternyata adalah salah. Seperti apa, cek di bawah ini yuk!</p>
+                <ol>
+                    <li>Pas lagi ngeringin payung, harusnya setelah dipakai ditutup aja dan nyari tempat untuk menyimpan payung.
+                        <img src="../../images/artikel/1/1.jpg"><br><br>
+                    <li>Mungkin kamu mau dibilang gentleman dengan membawakan tas pasangan kamu, padahal nggak lho. Akan lebih sopan dan pantas dilihat kalau kamu nggak usah bawain tas cewek kamu.
+                        <img src="../../images/artikel/1/2.jpg"><br><br>
+                    <li>Berpakaian di dalam rumah cari yang nyantai aja, asal jangan pakai piyama ya kalau bukan waktunya untuk tidur.
+                        <img src="../../images/artikel/1/3.jpg"><br><br>
+                    <li>Pakai topi dalam ruangan juga dinilai nggak sopan.
+                        <img src="../../images/artikel/1/4.jpg"><br><br>
+                    <li>Pakai make-up jangan di sembarang tempat ya...
+                        <img src="../../images/artikel/1/5.jpg"><br><br>
+                    <li>Kalau kamu lagi duduk di lantai dan pakai celana, cara duduknya kayak gini. Jangan ngangkang!
+                        <img src="../../images/artikel/1/6.jpg"><br><br>
+                    <li>Kalau semisal kamu ngundang teman kamu makan bareng, wajib bayarin ya, jangan bayar sendiri-sendiri.
+                        <img src="../../images/artikel/1/7.jpg"><br><br>
+                    <li>Kebiasaan ini sering dilakukan, naruh tas di meja, di kursi yang nggak dipakai.
+                        <img src="../../images/artikel/1/8.jpg"><br><br>
+                    <li>Kalau diajak makan tapi kamu sedang program diet?
+                        <img src="../../images/artikel/1/9.jpg"><br><br>
+                    <li>Kalau lagi ngumpul atau ngedate jangan sampai kamu berbicara di telepon kalau memang nggak penting banget, nggak sopan juga.
+                        <img src="../../images/artikel/1/10.jpg"><br><br>
+                    <li>Ngobrol sama lawan bicara nggak usah kenceng-kenceng. Yang elegan ya, ini bukan demo kok.
+                        <img src="../../images/artikel/1/11.jpg"><br><br>
+                    <li>Setelah makanan udah habis atau selesai makan.
+                        <img src="../../images/artikel/1/12.jpg"><br><br>
+                    <li>Tas belanja buat tas tangan cukup dipakai pas belanja aja, jangan dipakai terus menerus dimana pun dan kapan pun ya.
+                        <img src="../../images/artikel/1/13.jpg"><br><br>
+                    <li>Kalau kamu ketemu orang yang lebih muda untuk pertama kalinya.
+                        <img src="../../images/artikel/1/14.jpg"><br><br>
+                    <li>Walaupun adik atau anak kamu lebih muda (ya iyalah), tapi kamu juga harus respect sama mereka kalau mau masuk kamarnya. Ketuk pintu dulu lah minimal.
+                        <img src="../../images/artikel/1/15.jpg"><br><br>
+                </ol>
+                <p></p>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Alif Mauludi</span>
+                        <p class="komentar">Wah sangat menginspirasi</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">20-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Maulu Akbar</span>
+                                <p class="komentar">Iya nih gan saya juga terinspirasi</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">20-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

@@ -1,0 +1,114 @@
+/*forum start*/
+.forum {
+    width: 100%;
+}
+
+.forum .container {
+    width: 90%;
+    max-width: 1100px;
+    padding-top: 70px;
+    margin: auto;
+    position: relative;
+}
+
+.forum h1 {
+    cursor: pointer;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    padding: 0 20px;
+}
+
+.forum .join {
+    cursor: pointer;
+    width: 100%;
+    height: 150px;
+    background: url(../images/forum.jpg) center;
+    background-size: cover;
+    margin-bottom: 30px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.forum .forumC {
+    width: 100%;
+}
+
+.forum .forumList {
+    width: 100%;
+    position: relative;
+}
+
+.forum .descC {
+    margin-left: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.forum .descC h1 {
+    position: static;
+    display: table;
+    padding-top: 10px;
+    padding-left: 0;
+    font-size: 25px;
+}
+
+.forumListLine {
+    border: 1px solid #dbdbdb;
+    width: 15%;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -10px;
+}
+
+.forum .descC p {
+    margin: 15px;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.forum .subForum {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    border: thin solid #bfbfbf;
+    border-right: none;
+    border-left: none;
+}
+
+.forum .author {
+    float: right;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+.forum .date {
+    color: #575757;
+    margin-right: 10px;
+}
+
+.forum .iconC {
+    margin: 5px;
+    margin-left: 25px;
+}
+
+.forum .iconC span {
+    color: #969696;
+}
+
+.forum .iconC .iconL {
+    color: red;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.forum .iconC .iconK {
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+/*forum end*/

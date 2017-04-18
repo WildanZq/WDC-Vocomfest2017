@@ -1,0 +1,73 @@
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.container .imgC {
+    width: 65%;
+    height: auto;
+}
+.container .descC {
+    width: 34%;
+    float: right;
+}
+.container .desc {
+    margin: auto;
+    margin-top: 20px;
+    width: 95%;
+}
+.container .date {
+    color: #898989;
+    float: right;
+}
+.container .desc p {
+    width: calc(100% - 20px);
+    padding: 10px;
+    padding-top: 5px;
+    margin-top: 10px;
+    border: thin solid #a7a7a7;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 5px;
+}
+.iconL, .iconK, .like {
+    margin-top: 10px;
+}
+.iconL {
+    cursor: pointer;
+}
+.iconK {
+    margin-left: 10px;
+}
+.desc .mediaC {
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.desc .media {
+    height: 30px;
+    width: 30px;
+    background: black;
+    display: inline-block;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+}
+.desc .icon {
+    display: block;
+    margin-top: 6px;
+    font-size: 1.2em;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    .container .imgC {
+        width: 100%;
+    }
+    .container .descC {
+        float: none;
+        width: 95%;
+    }
+}

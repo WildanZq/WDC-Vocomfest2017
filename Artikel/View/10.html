@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/10.jpg)"></div>
+            <div class="artikel">
+                <h1>Takut Interupsi? Coba Lakukan Tips ini<div class="hLine"></div></h1>
+                <a class="author">Faishal</a>
+                <span class="date">10-03-2017</span>
+                <p>&emsp;Umumnya, rapat melalui telepon bisa berlangsung menyebalkan, dari satu orang yang lupa mematikan mikrofonnya ketika sedang menyiram toilet, hingga orang yang tiba-tiba bergabung di tengah rapat dan bertanya hal yang sudah dijawab sebelumnya.Dan ada juga orang yang sambungan teleponnya terputus - sehingga terpaksa kita harus mendengarkan nada sambung yang mengganggu.</p>
+                <p>&emsp;Tetapi mungkin, hal yang paling rumit dalam rapat via telepon adalah bagaimana bisa tahu kapan harus berbicara. Tidak ada bahasa tubuh yang mengisyaratkan Anda ingin bicara, tidak ada komunikasi visual tatap muka. Dengan banyaknya suara yang minta didengar - interupsi adalah sebuah norma. Lalu bagaimana Anda menyelak tanpa berlaku kasar?</p>
+                <img src="../../images/artikel/10/1.jpg">
+                <p>&emsp;Sylvain Barrette, orang Kanada-Prancis yang bekerja di pengelola manajemen aset di Frankfurt menerapkan sikap berbeda tergantung budaya, dan mengatakan tidak ada cara untuk menghindari interupsi. "Anda memang harus melakukannya."</p>
+                <p>&emsp;Namun, dalam beberapa tahun dia telah mengembangkan tekniknya. Misalnya, Barrette menemukan bahwa lebih mudah untuk menginterupsi orang Prancis, dibandingkan orang Jerman karena orang Prancis memiliki "tingkat kekacauan yang tinggi dalam percakapan telepon", katanya. "Dengan orang Prancis, semua orang berbicara di waktu yang sama. Cukup normal bagi kita untuk menginterupsi satu sama lain. Sedangkan dengan orang Jerman, Anda harus menunggu kalimat di akhir kalimat. Sangat tidak sopan menyelak orang Jerman, terutama jika Anda berada di Jerman," kata Barrette. "Pada akhirnya, yang terpenting adalah sopan." </p>
+                <p>&emsp;Pertama, untuk memastikan Anda punya alasan kuat untuk menginterupsi, kata Richie Frieman, yang mengelola blog Modern Manners Guy dan menulis buku Reply All... and Other Ways to Tank Your Career. Alasan itu termasuk mendorong orang untuk membuat keputusan, merangkum langkah selanjutnya, atau mengajak diskusi beralih ke topik lain, katanya. </p>
+                <p>&emsp;Selanjutnya, coba tes situasi dengan mencoba menemukan jalan terbaik menginterupsi percakapan telepon dengan orang dari budaya dan hirarki yang berbeda dengan mendengar dulu bagaimana cara orang lain melakukannya. Atau, cari nasihat dari orang yang memiliki keahlian dalam budaya tertentu.</p>
+                <h2>Jangan bertindak memalukan</h2>
+                <img src="../../images/artikel/10/2.jpg">
+                <p>&emsp;Sesaat ketika Anda menginterupsi percakapan, Anda mendapat panggung, kata Frieman, jadi jangan menjadi anti-klimaks.</p>
+                <p>&emsp;"Anda harus memastikan bahwa Anda mengatakan sesuatu yang penting. Bukan cuma, "Ya, saya setuju dengan Dave.""</p>
+                <p>&emsp;Jika interupsi berjalan konstruktif, percakapan akan berlangsung lebih baik, kata Frieman. Menjadi konstruktif tentu tidak mudah, Anda mungkin pernah merasa jengah ketika seseorang mengemukakan pendapatnya dengan suara yang keras, mengulang poin-poin sebelumnya, atau membiarkan orang lain mengetahui seberapa berkuasa atau cerdasnya dia. </p>
+                <p>&emsp;"Saya tak suka ketika seseorang mengatakan, 'Ayo kita rangkum saja'. Ini seperti merendahkan kedudukan orang itu," kata Frieman.</p>
+                <p>&emsp;Jika Anda menyiratkan bahwa sebuah kontribusi tidak berharga, Anda pada ujungnya akan dipandang jelek oleh yang lain. Untuk menghindari orang macam ini, dia akan menginterupsi dengan halus, dengan mengucapkan terima kasih kepada pembicara karena telah berbagi, mengabaikan ketika hanya ada sedikit kemajuan. </p>
+                <p>&emsp;Kemudian Frieman cepat mengalihkan percakapan sehingga peracau itu tidak memiliki kesempatan untuk mengulang kembali poinnya. Dia akan mengatakan, "Itu poin yang benar-benar baik, dan satu hal yang kita bisa berpikirkan di lain kesempatan, karena kita kehabisan waktu, adalah XYZ." </p>
+                <h2>Jelas dan ringkas</h2>
+                <p>&emsp;Katharina Barta, seorang ahli desain inovasi untuk program Creator Space di BASF, Ludwigshafen, memimpin bagian dari proyek global tahun lalu yang melibatkan perencanaan tur enam kota di seluruh dunia. Dia mengatakan bahwa dia menghabiskan banyak waktu dalam proyek itu dengan melakukan konferensi global via sambungan telepon, beberapa dimulai pukul 06.00 pagi atau malah pada pukul 08.00 malam. </p>
+                <p>&emsp;Menginterupsi orang lain adalah hal yang tak terpisahkan dalam memimpin rapat via telepon, katanya, dan ini semakin mudah karena tim telah menyediakan waktu di awal untuk memaparkan dengan jelas peran dan tanggung jawab mereka. Ketika percakapan telepon lebih bersifat eksplorasi di awal proyek, Berta memilih pendekatan komunikasi yang terbuka. Tetapi menjelang tenggat waktu, dia lebih banyak mengontrol. </p>
+                <p>&emsp;Kadang, dia mengatakan bahwa dia menginterupsi ketika merasa telah mendengar banyak argumen mendukung atau menolak poin yang harus di putuskan. Itu saat yang baik untuk mengambil alih dan meminta dilakukan pemungutan suara. "Kadang Anda sangat perlu untuk terlibat. Itu adalah jalan satu-satunya untuk membuat percakapan telepon kembali ke agenda awal," kata Barta. </p>
+                <p>&emsp;Di telepon, walau demikian, dibandingkan bertatap muka secara langsung, terasa lebih sulit bagi Barta menginterupsi, karena dia tidak bisa mengangkat tangan atau bergerak maju, katanya.</p>
+                <p>&emsp;"Adanya penundaan teknis dalam sambungan telepon membuatnya semakin sulit."</p>
+                <p>&emsp;"Dalam grup yang besar, hanya ada satu orang yang bicara dan yang lain diam dan saya tidak bisa mengucap hmmm sebagai transisi. Anda biasanya harus menunggu jeda untuk berbicara. Di telepon, Anda harus lebih memaksa dibandingkan rapat tatap langsung."</p>
+                <h2>Coba buat penyangkalan</h2>
+                <p>&emsp;Kadang-kadang waktu terbaik untuk bersikap tegas adalah saat-saat ketika semua orang berbicara sekaligus dan tertawa tentang hal itu, atau ketika ada keheningan, kata Frieman.</p>
+                <p>&emsp;"Anda tidak bisa menyalahkan orang untuk mencoba mengatakan sesuatu ketika ada keheningan."</p>
+                <p>&emsp;Dan ingat bahwa tidak setiap interupsi datang dengan gaya yang sama. Anda mungkin sering berkata "Maaf, tapi...", yang bisa terdengar melelahkan atau membuat Anda tampak tidak yakin akan diri sendiri, jadi carilah frasa lainnya.Beberapa orang membersihkan tenggorokan mereka, katakanlah 'yeah, yeah, yeah', atau memotong dengan nada parau mereka sendiri. </p>
+                <p>&emsp;Jika Anda merasa bahwa orang mungkin lelah dengan interupsi Anda, Anda selalu dapat mencoba untuk melunakkannya dengan peringatan di awal percakapan telepon, memperingatkan bahwa Anda akan melakukan interupsi dengan cara yang ramah jika orang bicara di luar topik atau terlalu panjang.</p>
+                <p>&emsp;Atau, lakukan seperti Barta: "Saya memberikan peringatan dalam situasi tersebut. Jika saya merasa ada komentar itu adalah sesuatu yang kita bisa diskusikan nanti, maka saya menyela dia dan mengatakan, "Kami memiliki batu loncatan itu di masa yang akan datang... bisa kita bahas lain kali? 'Peringatan dan aturan untuk rapat via telepon membantu memberikan perasaan yang baik tentang mana perilaku yang lebih diterima dan apa yang kurang ideal untuk situasi itu."</p>
+                <p>Dia menambahkan: "Dengan peringatan, mereka merasa lebih aman tentang jalannya percakapan."</p>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Edo Agusta</span>
+                        <p class="komentar">Semoga bisa diterapkan waktu forum di organisasi</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">10-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Dera Putri</span>
+                                <p class="komentar">Bener banget gan, saya mau coba</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">10-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

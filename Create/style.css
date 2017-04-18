@@ -1,0 +1,132 @@
+.container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tabFC {
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 90%;
+    max-width: 300px;
+}
+
+.tabF {
+    border: thin solid black;
+    background: #b7e7fd;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tabF:nth-child(1) {
+    background: white;
+    border-bottom: none;
+}
+
+.tabF:nth-child(2) {
+    border-right: none;
+    border-left: none;
+}
+
+.topF {
+    width: 90%;
+    margin-left: 3%;
+    margin-top: -2px;
+    border-color: black;
+    border-width: 1px;
+}
+
+.formC {
+    margin: auto;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 1100px;
+    position: relative;
+}
+
+.formC label {
+    position: absolute;
+    font-size: 1.3em;
+}
+
+.formC .fileI {
+    cursor: pointer;
+    position: static;
+    font-size: 1em;
+    margin-left: 15%;
+    color: white;
+    padding: 10px;
+    background: #29B6F6;
+}
+
+.formC .fileI:hover {
+    background: #4FC3F7;
+}
+
+.formC input, .formC textarea, .formC .cke, .formC .imgC {
+    margin-left: 15%;
+    width: 80%;
+    padding: 10px;
+}
+
+.formC input:nth-child(2) {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.formC input[type=file] {
+    display: none;
+}
+
+.formC .imgC {
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: calc(80% + 21px);
+    height: 50vh;
+}
+
+.formC .formItem:nth-child(2) .imgC {
+    height: 80vh;
+}
+
+.formC .cke {
+    transform: translateY(-20px);
+}
+
+.formC textarea {
+    resize: vertical;
+    height: 200px;
+}
+
+.formC input[type=submit] {
+    width: auto;
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+@media only screen and (max-width: 768px) {
+    .formC label:not(.fileI) {
+        position: static;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .formC .fileI {
+        margin-bottom: 10px;
+        float: right;
+    }
+    .formC input, .formC textarea, .formC .cke, .formC .imgC {
+        margin-left: 0;
+        width: 100%;
+    }
+    .formC input, .formC textarea, .formC .cke {
+        width: calc(100% - 20px);
+    }
+}
+@media only screen and (max-width: 395px) {
+    .mainTitle h1 {
+        font-size: 1.3em;
+    }
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/7.jpg)"></div>
+            <div class="artikel">
+                <h1>Menghilangkan Kebiasaan Datang Terlambat karena 'Jam Karet'<div class="hLine"></div></h1>
+                <a class="author">Wahaz</a>
+                <span class="date">13-03-2017</span>
+                <p>&emsp;Budaya terlambat sudah telanjur mengakar di Indonesia. Masyarakat di Indonesia saat ini seolah sudah lumrah dengan masalah keterlambatan. Bahkan Indonesia dikenal di dunia internasional dengan 'jam karet' karena seringkali tidak dapat tepat waktu. </p>
+                <p>&emsp;Hampir semua orang memang punya cerita tentang kisah keterlambatannya. Kebanyakan orang datang terlambat karena alasan telat bangun, tapi lebih banyak lagi yang beralasan kena macet di jalan. </p>
+                <img src="../../images/artikel/7/1.jpg">
+                <p>&emsp;Tapi, apapun alasannya, datang terlambat itu tidak baik. Bahkan jika Anda datang terlambat ke suatu acara, itu bisa berarti Anda tidak menghargai sang empunya acara. Berikut beberapa tips agar Anda tidak lagi datang terlambat : </p>
+                <ol>
+                    <li>Perhitungkan waktu mobilisasi Anda</li>
+                    <p>&emsp;Di Jakarta, sebenarnya macet tidak bisa dijadikan alasan, sebab macet bukan kejadian luar biasa lagi, tapi sudah menjadi rutinitas. Jadi, jika Anda masih menjadikan macet sebagai alasan keterlambatan Anda, itu berarti Anda tidak memperhitungkan mobilisasi Anda.</p>
+                    <p>&emsp;Sebelum pergi ke suatu tempat, Anda bisa memperhitungkan jarak antara rumah Anda dengan tempat tersebut. Apalagi jika tempat itu rutin Anda kunjungi sehari-hari, seperti pergi ke kantor, seharusnya perhitungan Anda bisa lebih tepat.</p>
+                    <p>&emsp;Lain lagi jika Anda mengunjungi tempat baru. Anda bisa menggunakan peta pada gadget Anda untuk mendapatkan petunjuk jalan sekaligus memperhitungkan waktu perjalanan Anda. Dengan kemajuan teknologi, seharusnya keterlambatan dapat dikurangi.</p>
+                    <li>Hilangkan stigma 'saya bisa mempersiapkan diri lebih cepat'</li>
+                    <p>&emsp;Setiap pagi pasti ada saja saat ketika Anda ingin tidur lebih lama. Akibatnya, Anda pun mengabaikan alarm yang sudah disetel sebelumnya agar tak telat bangun. Dalam benak pasti terpikir, Anda bisa melakukan segala sesuatunya dengan cepat nanti, sehingga Anda tidak akan terlambat.</p>
+                    <p>&emsp;Tapi ternyata, pemikiran Anda tak pernah benar-benar terjadi dan malah membuat Anda panik. Perhitungkanlah waktu bangun tidur dan waktu yang Anda butuhkan untuk bersiap-siap. Anda juga dapat mempersiapkan kebutuhan Anda di pagi hari sebelum tidur agar tidak terburu-buru saat pagi datang.</p>
+                    <li>Ubah pola pikir dan kebiasaan</li>
+                    <p>&emsp;Yang sering terjadi adalah, Anda mendapat undangan acara jam lima sore, lantas Anda baru berangkat jam lima sore juga. Mulai sekarang, ubah pola pikir Anda. </p>
+                    <p>&emsp;Agar tidak datang terlambat, Anda harus memikirkan juga waktu tempuh untuk datang ke tempat tersebut, seberapa lama mencari tempat parkir, dan kegiatan lainnya yang perlu Anda lakukan sebelum menghadiri acara tersebut.</p>
+                    <li>Datang 10 menit lebih awal</li>
+                    <p>&emsp;Jika Anda tidak mau terlambat, salah satu cara yang bisa dilakukan adalah dengan menetapkan waktu tertentu yang bisa didefinisikan sebagai keterlambatan. </p>
+                    <p>&emsp;Jika acara di mulai pada siang hari pada pukul 12.00 dan Anda menetapkan target untuk datang tepat pukul 12.00, tapi pada kenyataannya Anda datang pada pukul 12.01, itu berarti Anda terlambat. Hal ini akan membuat Anda stres dan panik. Untuk itu, setidaknya targetkan kedatangan Anda 10 menit sebelum acara di mulai. Hal ini akan menghindari Anda dari stres dan terlambat.</p>
+                    <li>Berpikir ke depan</li>
+                    <p>&emsp;Salah satu cara untuk mencegah datang terlambat adalah dengan membuat jadwal. Anda bisa mendaftar kegiatan Anda pada malam sebelumnya, untuk mengurangi keterlambatan karena Anda sudah tahu apa yang ingin Anda kerjakan setelah pekerjaan yang lain selesai. </p>
+                    <p>&emsp;Anda juga bisa memperhitungkan waktu lebih baik lagi daripada Anda harus menyelesaikan satu pekerjaan lebih dahulu kemudian baru melihat jadwal selanjutnya.</p>
+                    <li>Coba sekali dan lihat hasilnya</li>
+                    <p>&emsp;Jika terlambat sudah menjadi kebiasaan Anda, cobalah sesekali Anda datang tepat waktu ke sebuah acara dan rasakan hasilnya. Pilih saja acara yang Anda suka, dan lakukan hal-hal seperti yang disebutkan di atas. Bandingkan apa yang Anda rasakan ketika terlambat dan bagaimana rasa ketika datang tepat waktu. Selain bermanfaat untuk diri sendiri, datang tepat waktu juga bisa membuat sang empunya acara merasa dihormati dan dihargai.</p>
+                </ol>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Haibara Basuseno</span>
+                        <p class="komentar">Saya Biasanya kalo janjian jam brp,temen saya datengnya jam brp</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">13-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Kristi Sandra</span>
+                                <p class="komentar">Betul Banget gan saya juga</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">14-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

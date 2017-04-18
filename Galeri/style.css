@@ -1,0 +1,44 @@
+.poster {
+    margin-top: 50px;
+}
+
+.container {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.list {
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.posterItem {
+    margin: 2px 5px;
+    flex-shrink: 0;
+}
+
+.posterItem img {
+    height: 350px;
+    width: auto;
+}
+
+.posterItem .desc {
+    height: 99%;
+}
+
+.posterItem .desc .title {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 425px) {
+    .posterItem img {
+        height: auto;
+        width: 90vw;
+    }
+}

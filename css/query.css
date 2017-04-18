@@ -1,0 +1,65 @@
+@media only screen and (max-width: 1024px) {
+    .artikel .content {
+        width: 48%;
+        height: 48%;
+        margin: 0;
+    }
+    
+    .artikel .c1 {
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .artikel .c2 {
+        margin-right: 15px;
+    }
+    
+    .artikel .c21 {
+        margin: 0;
+    }
+    
+    .artikel .content .desc {
+        height: 220px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .forum .descC p, .forumListLine {
+        display: none;
+    }
+    
+    .forum .descC {
+        position: static;
+    }
+    
+    .forum .iconC {
+        top: auto;
+        bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .artikel .container {
+        height: 987px;
+    }
+    
+    .artikel .content {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .forum .date {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    
+}
+
+@media only screen and (max-width: 320px) {
+    
+}

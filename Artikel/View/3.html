@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/3.jpg)"></div>
+            <div class="artikel">
+                <h1>Cara Mudah Meningkatkan Kemampuan Bersosialisasi<div class="hLine"></div></h1>
+                <a class="author">Faishal</a>
+                <span class="date">17-03-2017</span>
+                <p>&emsp;Apa pun profesi dan bidang kerja Anda, kemampuan sosialisasi sangat mutlak diperlukan. Sekalipun pekerjaan tidak mengharuskan Anda untuk bertemu dengan banyak orang, sebagai makluk sosial Anda tetap dituntut untuk mampu bersosialisasi. Sekecil apa pun lingkungan kerja, Anda tetap perlu berinteraksi dengan orang-orang di sekeliling Anda.</p>
+                <img src="../../images/artikel/3/3.jpg">
+                <p>&emsp;Kemampuan sosialisasi memang selalu diidentikkan dengan kemampuan berkomunikasi dengan lingkungan. Namun tentu saja bukan asal komunikasi, Anda harus memiliki kemampuan bersosialisasi yang baik. Karena melalui sosialisasi yang baik dapat mengantarkan Anda ke gerbang kesuksesan.</p>
+                <p>&emsp;Berikut merupakan cara meningkatkan kemampuan bersosialisasi anda. Selamat mencoba.</p>
+                <ol>
+                    <li><b>Melatih kemampuan berkomunikasi dengan orang lain dapat dimulai dari hal-hal yang kecil</li></b>
+                    <p>&emsp;Meskipun itu hanya dimulai dengan sebuah basa-basi seperti melempar senyuman atau bertanya kepada orang lain terlebih dahulu mengenai kabar atau pekerjaan. Kalau ada feedback, maka akan membuat Anda terdorong untuk lebih berani berkomunikasi lebih lanjut dengan orang lain.</p>
+                    <li><b>Utarakan hal-hal yang lebih teknis</li></b>
+                    <p>&emsp;Bangun komunikasi dengan mengutarakan hal-hal yang lebih teknis. Namun sebaiknya fokus pembicaraan harus jelas, obrolan tanpa arah akan membuat lawan bicara Anda bingung.</p>
+                    <li><b>Perluas Wawasan</li></b>
+                    <p>&emsp;Agar dapat menjalin komunikasi yang baik, sebaiknya perluas wawasan Anda. Caranya yaitu rajin membaca agar Anda lebih mudah mengetahui arah pembicaraan dan tidak salah pengertian mengenai topik pembicaraan yang dibahas.</p>
+                    <li><b>Ketahui waktu untuk diam dan bicara</li></b>
+                    <p>&emsp;Anda harus tahu kapan waktu untuk bicara dan diam. Diam di sini untuk belajar mengetahui orang lain dan mengamati dulu mengenai sesuatu. Menjadi pendengar yang baik dapat membuat Anda mengetahui kapan waktu yang tepat untuk berbicara. Sehingga orang lain dapat lebih menghargai Anda.</p>
+                    <li><b>Hati-hati berkomentar</li></b>
+                    <p>&emsp;Simak dengan baik ketika orang lain sedang mengajak Anda berbicara. Jika hendak berkomentar, jangan mengeluarkan pernyataan yang akan membuat orang lain merasa tidak nyaman. Pastikan bahwa komentar kita memang berisi.</p>
+                    <li><b>Berbicara dengan jelas</li></b>
+                    <p>&emsp;Kemampuan berkomunikasi akan berdampak pada bagaimana orang-orang memperlakukan Anda. Mereka yang periang biasanya banyak teman karena ia tahu bagaimana membangun pembicaraan.</p>
+                    <li><b>Punya sesuatu untuk dikatakan</li></b>
+                    <p>&emsp;Jangan berpikir bahwa hanya dengan Anda berbicara orang lain pasti mendengarkan. Pastikan komentar Anda mempunyai 'isi'.</p>
+                    <li><b>Penuh Pengertian</li></b>
+                    <p>&emsp;Setiap orang mempunyai latar belakang yang berbeda. Jadi, pembicaraan awal biasanya tidak bisa dijadikan patokan untuk menilai orang lain. Anda bisa saja tidak setuju dengan rekan kerja namun masih bisa bekerja sama secara produktif.</p>
+                    <li><b>Pengaruhi orang lain</li></b>
+                    <p>&emsp;Dengan pendapat dan opini yang bermutu, Anda telah memberikan 'warna' dalam bersosialisasi. Hal ini akan mempengaruhi orang lain dan mereka akan menyukai Anda.</p>
+                    <li><b>Selesaikan setiap masalah</li></b>
+                    <p>&emsp;Konflik tidak selalu jelek. Setiap argumentasi bisa dijadikan bahan untuk solusi. Kalau Anda bisa, lakukanlah.</p>
+                    <li><b>Tetap berkepala dingin</li></b>
+                    <p>&emsp;Pepatah "Hati boleh panas, kepala harus tetap dingin" sudah sering kita dengar. Jadi, kalau Anda melihat ada orang yang memang senang cari gara-gara, mendingan jauhi saja dia.</p>
+                    <li><b>Jangan takut untuk berubah</li></b>
+                    <p>&emsp;Jangan ragu dan takut mengubah pola berpikir anda dalam bersosialisasi.</p>
+                    <li><b>Tidak ada "saya" dalam tim</li></b>
+                    <p>&emsp;Ingat untuk terus bekerja sama. Banyak orang gemar membawa egonya dalam suatu teamwork. Jangan pernah lupa untuk memuji pekerjaan orang lain, mereka akan melakukan hal yang sama</p>
+                    <li><b>Berdirilah di tengah-tengah</li></b>
+                    <p>&emsp;Jika terjadi masalah di lingkungan anda maka cobalah untuk berada di tengah-tengah dan tampil di depan. Maka itu akn memperngaruhi minat orang untuk mengenal anda lebih jauh.</p>
+                    <li><b>Mempunyai rencana</li></b>
+                    <p>&emsp;Anda harus punya rencana dalam bersosialisasi jangan langsung dengan spontan sebab hal itu akan berpengaruh pada hasil yang akan anda dapatkan.</p>
+                </ol>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Satria Antasena</span>
+                        <p class="komentar">Cocok sekali mengingat saya berada di lingkungan introvert</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">17-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Salman Widodo</span>
+                                <p class="komentar">wah sama saya juga</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">17-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

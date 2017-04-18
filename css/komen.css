@@ -1,0 +1,72 @@
+.komen {
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 80px;
+    padding-top: 5px;
+    border-top: thin solid #9f9f9f;
+}
+.komen > h1 {text-align: center; margin-bottom: 20px;}
+.komenForm {width: 100%;height: 170px;}
+.komenItem {margin-top: 10px;}
+.komen .pp {
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    float: left;
+}
+.komen .namaK {
+    margin-left: 15px;
+    font-size: 1.3em;
+}
+.komen .komentar {
+    margin: auto;
+    margin-left: 57px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #484848;
+    font-size: .9em;
+}
+.komen .balas {
+    margin-left: 56px;
+}
+.komen .iconLK {
+    color: red;
+    margin-left: 15px;
+    float: none;
+}
+.komen .likeK {
+    float: none;
+    margin-left: 5;
+}
+.komen .dateK {
+    color: #898989;
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.komen textarea {
+    width: calc(100% - 70px);
+    height: 100px;
+    float: right;
+    resize: vertical;
+}
+.komen input[type=submit] {
+    float: right;
+    margin-top: 10px;
+}
+.balasCS {
+    margin-left: 57px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: thin solid #d0d0d0;
+}
+.balasC {
+    display: none;
+    padding-top: 20px;
+}
+.show {display: block;}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/9.jpg)"></div>
+            <div class="artikel">
+                <h1>Hati-Hati! 10 Ucapan Sederhana yang Kita Pakai Sehari-Hari Ini, Sebenarnya Rasis Berat<div class="hLine"></div></h1>
+                <a class="author">faishal</a>
+                <span class="date">11-03-2017</span>
+                <p>&emsp;Kamu pasti sudah nggak asing lagi dengan isu yang satu ini. Sedikit banyak, kamu juga pasti pernah mendengar sejarah tentang penindasan kaum imigran kulit hitam oleh kulit putih di Amerika. Kamu juga pasti pernah membaca tentang Apartheid, sistem yang baru dihapuskan dari pemerintahan Afrika Selatan di tahun 1990.</p>
+                <img src="../../images/artikel/9/1.jpg">
+                <p>&emsp;Tapi tahu nggak sih kalo sebenarnya istilah “rasis” itu bukan hanya dipakai untuk menjelaskan diskriminasi yang dilakukan kaum kulit putih terhadap kulit hitam? Menurut Oxford English Dictionary, definisi rasisme merujuk pada pemahaman yang menganggap bahwa ras atau suku tertentu lebih superior atas ras atau suku yang lainnya. Dengan kata lain, semua tindakan atau pemikiran yang sifatnya melecehkan ras, etnis, atau suku lain bisa digolongkan sebagai tindakan rasis.</p>
+                <p>&emsp;Nah, kalo udah gini kamu yakin nggak pernah melakukan rasis secara nggak sadar dalam kehidupanmu sehari-hari? Yuk coba simak artikel ini dulu…</p>
+                <ol>
+                    <li>Saat Sarapan: “Sarapan Roti Dong Mah, Biar Keren Kayak Bule.”</li>
+                    <img src="../../images/artikel/9/2.jpg">
+                    <p>&emsp;Bule adalah kata slang yang umum digunakan di Indonesia untuk menyebut orang asing atau keturunan kulit putih yang ada di Indonesia. Sebagian masyarakat kita mungkin sudah terbiasa menggunakan istilah bule tanpa maksud menyakiti. Tapi berdasarkan Kamus Besar Bahasa Indonesia, kata ‘bule’ itu berakar pada “bulai” yang berarti albino. Itu sebabnya beberapa orang asing atau ekspatriat yang belum lama tinggal di Indonesia kadang tersinggung perasaannya akibat istilah ini. Jadi hati-hati, ya.</p>
+                    <p>&emsp;Selain itu, menganggap bahwa makanan “bule” lebih keren daripada makanan asli Indonesia adalah cerminan sikap rasis terhadap bangsa kita sendiri. Kata siapa makanan orang Indonesia kalah keren dibandingkan makanan orang Barat? Jangan terserang inferiority complex gitu dong, ah…</p>
+                    <li>“Mama Pelit Ih, Kaya Orang Cina!”</li>
+                    <img src="../../images/artikel/9/3.jpg">
+                    <p>&emsp;Mungkin kita sudah biasa dengan istilah ini sejak kecil. Gaya hidup hemat sering kali dikorelasikan dengan keturunan Tionghoa di Indonesia, yang umum berprofesi sebagai pedagang. Padahal, korelasi keturunan Tionghoa dengan sifat prihatin atau pelit tidak bisa dibuktikan secara ilmiah lho. Pun, ajaran Kong Hu Chu yang begitu memengaruhi kehidupan mereka tidak mengajarkan sikap pelit.</p>
+                    <p>&emsp;Kenyataannya tidak semua keturunan Cina itu prihatin. Banyak juga yang suka hidup mewah dan dermawan. Tergantung individu masing-masing. Jadi, sebaiknya kamu berpikir dulu deh kalo mau mengucapkan kalimat rasis ini.</p>
+                    <li>“Pantes Aja Lo Lelet. Orang Jawa, Sih.”</li>
+                    <img src="../../images/artikel/9/4.png">
+                    <p>&emsp;Entah kenapa, stereotip orang Jawa adalah halus, lelet, dan manutan. Memang benar bahwa sebuah suku selalu mempunyai ciri khas tertentu yang membedakannya dari suku lain. Tapi, setiap anggota dari suku tersebut adalah individu-individu yang unik dengan kepribadiannya masing-masing.</p>
+                    <li>“Keras Banget Sih Lo. Emang Dasar Batak.”</li>
+                    <img src="../../images/artikel/9/5.jpg">
+                    <p>&emsp;Adalah fakta bahwa aksen orang yang berasal dari Sumatra – khususnya Sumatra Utara – memang relatif tegas, dengan intonasi yang lebih tinggi dibandingkan cara bicara orang Indonesia pada umumnya. Tapi ketika kamu melabeli semua orang yang bersikap keras dan tak mau kalah dengan perangai ‘Orang Batak’, kamu sebenarnya sedang melabeli suku tersebut sebagai suku yang kasar. Yap, kamu sedang melakukan tindakan rasis.</p>
+                    <li>Memanggil Orang Berkulit Hitam Dengan Sebutan ‘Negr*’</li>
+                    <img src="../../images/artikel/9/6.jpg">
+                    <p>&emsp;Duh, ini perilaku yang nggak banget! Sayangnya banyak dari kita yang nggak tahu bahwa kata ‘negr*’, ‘nigg*r’, atau “the n-word” adalah kata luar biasa kasar di tempat asalnya di Amerika sana. Jika seorang seleb atau politikus kelepasan mengucapkan kata ini di depan publik, karir mereka bisa hancur.</p>
+                    <p>&emsp;Istilah ini awalnya digunakan untuk merujuk pada keturunan kulit hitam yang berasal dari Afrika. Istilah ini menjadi “haram” karena erat kaitannya dengan sejarah perbudakan kulit hitam di Amerika. Ini adalah masa dimana orang kulit hitam bisa digantung di pohon dan dijadikan makanan ke anjing buas hidup-hidup hanya karena warna kulit mereka. Dengan mengucapkan kata ini, kamu seolah mendukung perlakuan kejam yang pernah dialami ras kulit hitam di Amerika ratusan tahun lamanya.</p>
+                    <p>&emsp;Jadi, jangan pernah lagi mengucapkan kata ini, ya. Ganti saja dengan ‘orang kulit hitam’ atau ‘kaum Afrika-Amerika’.</p>
+                    <li>Di Daerah Tertentu, Mahasiswa Dari Indonesia Timur Mendapat Perlakuan Yang Berbeda Hanya Karena Daerah Asal Mereka.</li>
+                    <img src="../../images/artikel/9/7.jpg">
+                    <p>&emsp;Jika kamu pendatang yang berasal dari propinsi di sebelah timur Indonesia — seperti Papua atau Maluku – mungkin kamu pernah merasa agak kesulitan berbaur dengan lingkungan sekitarmu. Meski kamu tidak berniat melakukan apa-apa, orang di sekitarmu kadang melihatmu dengan pandangan yang lebih waspada.</p>
+                    <li>“Kamu Pasti Orang Sunda, Cantik Soalnya!”</li>
+                    <img src="../../images/artikel/9/8.jpg">
+                    <p>&emsp;Karena kulit mereka yang relatif lebih cerah dari orang Indonesia pada umumnya, cewek Sunda banyak dianggap lebih cantik dibandingkan perempuan Indonesia dari suku yang lain. Padahal, ini sama dengan bilang kalau seorang cewek Indonesia yang berasal dari suku lain itu nggak cantik. Udah rasis, nggak penting lagi.</p>
+                    <li>“Lo Mau Memperbaiki Keturunan, Ya?”</li>
+                    <img src="../../images/artikel/9/9.jpg">
+                    <p>&emsp;Kalimat ini biasanya diucapkan pada orang Indonesia yang punya pacar atau calon suami dari negeri Barat. Kita ringan aja mengatakan hal ini, seolah-olah ada hal yang memang perlu diperbaiki dari suku kita atau ras Asia. Ouch.</p>
+                    <li>9.	“Kamu orang Banten? Yang suka nyantet itu ya?”</li>
+                    <img src="../../images/artikel/9/10.jpg">
+                    <p>&emsp;Plis deh, santet itu bukan cuma orang Banten kali yang punya. Daerah lain seperti Jawa Timur, Yogyakarta, dan Bali pun punya tradisi magis yang kurang lebih sama kuatnya.Jika ingin mengidentifikasi orang berdasarkan tempat mereka berasal, sebaiknya kamu menyebut hal-hal positif dari daerah tersebut — bukan sisi negatifnya. Salah-salah kamu malah bisa menyinggung perasaan orang tersebut lho.</p>
+                    <li>“Dia Keturunan Arab Gitu…Muka Kayak Teroris.”</li>
+                    <img src="../../images/artikel/9/11.jpg">
+                    <p>&emsp;Pertama, nggak semua orang Arab itu Muslim. Ada yang Kristen, ada yang tidak punya agama, ada yang Baha’i.</p>
+                    <p>&emsp;Kedua, orang Muslim itu tidak identik dengan kekerasan dan terorisme! Citra negatif ini adalah hal yang tidak bijak dan sangat mengganggu. Kita nggak boleh menggeneralisasikan sebuah agama dengan suatu sifat yang spesifik, apapun agama itu.</p>
+                    <p>&emsp;Ketiga, sebagian besar dari mereka yang terbukti melakukan tindakan teror di Indonesia adalah orang dengan ras Melayu. Misalnya saja Amrozi, Imam Samudra, dan Dulmatin. Mereka bukan orang Arab.</p>
+                    <p>&emsp;Hal-hal diatas cuma beberapa contoh sikap rasis yang secara tidak sadar sering kita ucapkan atau lakukan dalam kehidupan sehari-hari. Fakta bahwa kita tinggal di Indonesia yang bhinneka memberi banyak peluang buat kita melakukan hal-hal kecil yang bisa menyinggung suku atau ras lain di sekitar kita.</p>
+                    <p>&emsp;Karena itu, kita harus lebih peka dan berhati-hati dalam berucap dan bertindak. Jangan sampai kita menyakiti mereka yang ada di dekat kita, ya.</p>
+                </ol>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Yaafi Suichi</span>
+                        <p class="komentar">Kita harus menghargai masyarakat sebangsa setanah air</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">12-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Altha five</span>
+                                <p class="komentar">Setuju gan</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">12-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Galeri | Smart Gen</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/header-query.css">
+        <link rel="stylesheet" href="../css/signin.css">
+        <link rel="stylesheet" href="../css/galeri.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/font-awesome.css">
+        <link rel="stylesheet" href="../css/sub.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="mainC">
+            <div class="main">
+                <div class="mainLine"></div>
+                <div class="mainTitle" style="position: absolute; left: 50%"><h1>Galeri <i class="fa fa-picture-o" aria-hidden="true"></i></h1></div>
+            </div>
+        </div>
+        
+        <div class="filterC">
+            <div class="filter">
+                <a><span>Newest</span></a>
+                <a><span>Most Views</span></a>
+                <a><span>Most Likes</span></a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="list">
+                <div class="posterItem">
+                    <img src="../images/galeri/1.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Wahaz</span></a>
+                            <p class="title" onclick="location.href='View/1.html';">Asik Tidur...</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/2.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Wildan</span></a>
+                            <p class="title" onclick="location.href='View/2.html';"> Waktu Sibukmu</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/3.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Faishal</span></a>
+                            <p class="title" onclick="location.href='View/3.html';">Tentang Hujan</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/4.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Rizal</span></a>
+                            <p class="title" onclick="location.href='View/4.html';">Akhlak yg Rusak</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/5.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Aldi</span></a>
+                            <p class="title" onclick="location.href='View/5.html';">Belajar Itu Ibadah</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/6.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Ziaulhaq</span></a>
+                            <p class="title" onclick="location.href='View/6.html';">Zona Aman</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/7.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Akbar</span></a>
+                            <p class="title" onclick="location.href='View/7.html';">Pizzzza</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/8.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Wahaz</span></a>
+                            <p class="title" onclick="location.href='View/8.html';">Berbicara Baik</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/9.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Wildan</span></a>
+                            <p class="title" onclick="location.href='View/9.html';">Ide Gila</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/10.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Faishal</span></a>
+                            <p class="title" onclick="location.href='View/10.html';">My Today</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/11.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Ziaulhaq</span></a>
+                            <p class="title" onclick="location.href='View/11.html';">Budayakan Antri</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/12.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Faishal</span></a>
+                            <p class="title" onclick="location.href='View/12.html';">Bakat Dilatih</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/13.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Rizal</span></a>
+                            <p class="title" onclick="location.href='View/13.html';">Bukan Gunung...</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posterItem">
+                    <img src="../images/galeri/14.png">
+                    <div class="desc">
+                        <div class="descC">
+                            <a><span class="author">Ziaulhaq</span></a>
+                            <p class="title" onclick="location.href='View/14.html';">The Truth.</p>
+                            <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                            <span class="like">237</span>
+                            <div class="mediaC">
+                                <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                                <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="paginationC">
+            <div class="pagination">
+                <div class="main">
+                    <span><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>37</span>
+                    <span><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/js.js"></script>

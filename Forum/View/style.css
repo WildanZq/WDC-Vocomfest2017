@@ -1,0 +1,36 @@
+.container {
+    margin-top: 130px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.forum {
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: thin solid #a0a0a0;
+}
+.forum .iconL, .forum .iconK {
+    margin-right: 10px;
+}
+.desc {
+    width: calc(100% - 10px);
+    padding-left: 10px;
+}
+.desc p {
+    margin-top: 10px;
+}
+.mediaIcon {
+    border-top: thin solid #a0a0a0;
+    position: static;
+    padding-top: 5px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+.owner {
+    top: auto;
+    bottom: 5px;
+}
+.komen {
+    border: none;
+    margin-top: 20px;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/4.jpg)"></div>
+            <div class="artikel">
+                <h1>Kenapa Saya Harus Antri?<div class="hLine"></div></h1>
+                <a class="author">Wahaz</a>
+                <span class="date">16-03-2017</span>
+                <p></p>
+                <h3>Pelajaran dari Sebuah Antrian</h3>
+                <p>&emsp;Mengapa mengantri lebih penting daripada matematika? kita hanya perlu melatih anak selama 3 tahun saja secara intensif untuk bisa Matematika, sementara kita perlu melatih anak hingga 12 Tahun atau lebih untuk bisa mengantri dan selalu ingat pelajaran berharga di balik proses mengantri.</p>
+                <img src="../../images/artikel/4/1.jpg">
+                <p>&emsp;Karena tidak semua anak kelak akan berprofesi menggunakan ilmu matematika kecuali TAMBAH, KALI, KURANG DAN BAGI. Sebagian mereka anak menjadi Penari, Atlet Olimpiade, Penyanyi, Musisi, Pelukis dsb.</p>
+                <p>&emsp;Karena biasanya hanya sebagian kecil saja dari murid-murid dalam satu kelas yang kelak akan memilih profesi di bidang yang berhubungan dengan Matematika. Sementara SEMUA MURID DALAM SATU KELAS ini pasti akan membutuhkan Etika Moral dan Pelajaran Berharga dari mengantri di sepanjang hidup mereka kelak.</p>
+                <p>&emsp;Dan berikut adalah sebagian pelajaran yang bisa diambil dalam sebuah antrian:</p>
+                <ol>
+                    <li>Antri mengajarkan manajemen waktu, jika ingin mengantri paling depan datang lebih awal dan persiapan lebih awal.</li>
+                    <li>Antri mengajarkan untuk belajar melatih kesabaran dan menunggu giliran tiba terutama jika ia di antrian paling belakang.</li>
+                    <li>Antri mengajarkan berdisiplin dan tidak menyerobot hak orang lain.</li>
+                    <li>Antri mengajarkan bersosialisasi menyapa dan mengobrol dengan orang lain di antrian.</li>
+                    <li>Antri mengajarkan menghormati hak orang lain, yang datang lebih awal dapat giliran lebih awal dan tidak saling serobot merasa diri penting.</li>
+                    <li>Belajar tabah dan sabar menjalani proses dalam mencapai tujuannya.</li>
+                    <li>Belajar hukum sebab akibat, bahwa jika datang terlambat harus menerima konsekuensinya di antrian belakang.</li>
+                    <li>Belajar disiplin, teratur dan kerapihan.</li>
+                    <li>Belajar memiliki RASA MALU, jika ia menyerobot antrian dan hak orang lain.</li>
+                    <li>Belajar jujur pada diri sendiri dan pada orang lain.</li> 
+                </ol>
+                <p>&emsp;Lantas, apa saja etika yang harus dijaga saat mengantri?</p>
+                <ol>
+                    <li>Antri sesuai urutan</li>
+                    <img src="../../images/artikel/4/2.jpg">
+                    <li>Jangan berebut posisi ketika antri</li>
+                    <li>Jangan sekali-kali memotong antrian</li>
+                    <li>Beri kesempatan yang antri duluan</li>
+                    <li>Jangan antri sambil membawa/menggendong barang yang kurang pantas (misalnya tas ransel besar) tas bisa dijinjing.</li>
+                    <li>Jangan antri dengan membawa binatang piaraan</li>
+                    <img src="../../images/artikel/4/3.jpg">
+                    <li>Jangan antri dengan pakaian yang menyolok/seronok</li>
+                    <li>Jangan antri dengan membawa makanan yang bau</li>
+                    <li>Jangan saling mendorong pada saat antri</li>
+                    <img src="../../images/artikel/4/4.jpg">
+                    <li>Jangan sampai membuat antrian baru. ikuti antrian paling belakang</li>
+                    <li>Jangan saling berebut antrian</li>
+                    <li>Jangan dengan sengaja menyentuh pengantri yang lain</li>
+                    <li>Jangan ikut berteriak bila ada pengantri yang menyerobot</li>
+                    <img src="../../images/artikel/4/5.jpg">
+                    <li>Bila antri berkendaraan jangan membunyikan klakson</li>
+                    <img src="../../images/artikel/4/6.jpg">
+                    <li>Budaya antri yang tertib menunjukkan tingkat disiplin sebuah bangsa dan kualitas kesabaran warga negaranya</li>
+                    <img src="../../images/artikel/4/7.jpg">
+                </ol>
+                <p></p>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Hendy Hendrawan</span>
+                        <p class="komentar">Cocok untuk orang Indonesia, harusnya orang Indonesia harus membudayakan antri</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">17-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Andry Sisworoso</span>
+                                <p class="komentar">Orang Indonesia memang harus dibudayakan antri biar teratur</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">18-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

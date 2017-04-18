@@ -1,0 +1,59 @@
+.header {background-color: white;}
+.header .logoC {margin-top: 25px;height: 100px;width: 200px;}
+.header .desc {opacity: 0;transform: scale(0);}
+.header .navL, .header .navR {margin-top: 25px}
+.header .navL .item, .header .navR .item, .navIcon, .header .navR .media .mediaIcon, .header .navR .search, .searchK {color: black}
+.line1, .line2 {width: 40%;}
+.top {position: fixed;right: 20px;bottom: 20px;font-size: 2em;z-index: 90;}
+.topA {color: #bababa}
+.topA:hover {color: #9b9b9b}
+.paginationC {width: 100%;margin-top: 20px;overflow: visible;transform: translateY(-2px);}
+.pagination {margin: auto;width: 90%;max-width: 250px;}
+.pagination .main {color: #6d6d6d;overflow: hidden;box-shadow: 0 0 8px #ebebeb;display: flex;justify-content: center;width: 100%;border: thin solid #bfbfbf;border-radius: 2px;}
+.pagination span {padding: 10px;cursor: pointer;border-right: thin solid #bfbfbf;width: 43px;}
+.pagination span:last-child {border-right: none;}
+.pagination span:hover {background: #e8e8e8;color: #0d1e53;}
+.pagination .active {color: white;background-color: #28438d;}
+.pagination .active:hover {color: white;background-color: #28438d;}
+footer {position: absolute;}
+.mainC {width: 100%;margin-top: 130px;}
+.main {height: 43px;margin-bottom: 13px;position: relative;text-align: center;background: white;z-index: 2;}
+.mainLine {border: thin solid #696969;width: 85%;max-width: 400px;margin: auto;transform: translateY(27px);}
+.mainTitle h1 {display: table;position: relative;left: -50%;margin: auto;background: white;padding: 0 20px 0 20px;}
+.filterC {width: 100%;margin-top: 20px;}
+.filter {display: flex;justify-content: center;width: 90%;max-width: 500px;margin: auto;}
+.filter span {color: #717171;position: relative;margin: 0 10px;}
+.filter span:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    border: thin solid black;
+    opacity: 0;
+    transition: .5s;
+}
+.filter span:hover {color: black;}
+.filter span:hover:after, .filter a:first-child span:after {opacity: 1;width: 95%;}
+.filter a:first-child span {color: black}
+.iconL {color: red;font-size: 1.3em;}
+.iconK {color: #434343;font-size: 1.3em;cursor: auto}
+.like {color: #adadad;font-size: .9em;margin-left: 5px;}
+@media only screen and (max-width: 768px) {
+    .line1, .line2 {width: 37%;}
+}
+@media only screen and (max-width: 700px) {
+    .header .logoC {margin-left: 15px;margin-top: 10px;width: 170px;}
+    .line1 {width: 0;}
+    .line2 {width: 60%;}
+    .mainTitle h1 {font-size: 1.5em;}
+    .mainLine {transform: translateY(20px);}
+}
+@media only screen and (max-width: 425px) {
+    .line2 {width: 50%;}
+}
+@media only screen and (max-width: 320px) {
+    .header .logoC {margin-left: 5px;margin-top: 15px;width: 160px;height: 80px;}
+}

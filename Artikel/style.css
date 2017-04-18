@@ -1,0 +1,187 @@
+.container {
+    width: 100%;
+    margin-top: 40px;
+    padding-bottom: 5px;
+}
+
+.mainA {
+    width: 90%;
+    max-width: 1100px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+}
+
+.mainA .imgC {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+}
+
+.mainA .desc {
+    width: 59%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mainA .descC {
+    position: relative;
+    height: 83%;
+    overflow: hidden;
+}
+
+.mainA p, .mainA h1, .mainA a {
+    margin: 0 10px;
+}
+
+.mainA h1, .mainA .imgC {cursor: pointer;}
+
+.mainA p {
+    margin-top: 10px;
+}
+
+.mainA .date, .list .aItem .date {
+    color: #747474;
+    float: right;
+    margin-right: 15px;
+}
+
+.iconL, .iconK, .like {
+    float: left;
+    margin-top: 10px;
+}
+
+.iconK, .iconL {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.list .iconL {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.mainA .mediaC, .list .mediaC {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.mainA .media, .list .media {
+    height: 30px;
+    width: 30px;
+    background: black;
+    display: inline-block;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.mainA .icon, .list .icon {
+    display: block;
+    margin-top: 6px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, .9));
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.list .aItem {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height: 450px;
+    width: 31%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.list .aItem:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.list .aItem:hover img {
+    transform: scale(1.05);
+}
+
+.list .aItem .imgC {
+    margin: auto;
+    margin-top: 10px;
+    width: 95%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list .aItem .desc, .mainA .descC {
+    border-bottom: thin solid #bcbcbc;
+}
+
+.list .aItem .desc {
+    height: 160px;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.list .aItem .desc * {
+    margin-left: 15px;
+}
+
+.aItem .desc h1 {
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+.list .aItem .desc p {
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 950px) {
+    .list .aItem {
+        width: 47%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .mainA {
+        margin-bottom: 20px;
+        height: 600px;
+    }
+    .mainA .imgC {
+        height: 50%;
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+    .mainA .desc {
+        height: 50%;
+        width: 100%;
+        position: static;
+    }
+    .list .aItem {
+        width: 99%;
+    }
+}

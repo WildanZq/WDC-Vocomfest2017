@@ -1,0 +1,129 @@
+/*fonts start*/
+@font-face {
+    font-family: "noto";
+    src: url("../fonts/NotoSans-Regular.ttf");
+}
+/*fonts end*/
+
+/*keyframes start*/
+@keyframes geser {
+    0% {transform: translateY(-10px)}
+    50% {transform: translateY(10px)}
+    100% {transform: translateY(-10px)}
+}
+
+@keyframes modal {
+    0% {opacity: 0;}
+    25% {opacity: .5;}
+    100% {opacity: 1;}
+}
+
+@keyframes modalR {
+    0% {opacity: 1;}
+    25% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes modalContent {
+    from {transform: scale(0);} 
+    to {transform: scale(1);}
+}
+
+@keyframes modalContentR {
+    from {transform: scale(1);} 
+    to {transform: scale(0);}
+}
+
+@keyframes navK {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes navKR {
+    from {transform: translateX(0);}
+    to {transform: translateX(100%);}
+}
+
+@keyframes descGaleri {
+    from {transform: translateY(250%);}
+    to {transform: translateY(0);}
+}
+/*keyframes end*/
+
+* {
+    font-family: noto;
+    margin: 0;
+    transition: .5s;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+html {position: relative;}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #005999;
+}
+
+a:hover {
+    color: #3af;
+}
+
+input, textarea {transition: 0s;}
+
+input:focus, textarea:focus {
+    outline: 2px solid #03A9F4;
+}
+
+input:active, textarea:active {
+    outline: none;
+}
+
+input[type=submit] {
+    border: 2px solid #03A9F4;
+    background-color: #03A9F4;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: .5s;
+}
+
+input[type=button] {
+    transition: .5s;
+}
+
+input[type=submit]:hover {
+    border: 2px solid #4FC3F7;
+    background-color: #4FC3F7;
+}
+
+.more {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background: white;
+    border: none;
+    padding: 12px 17px;
+    cursor: pointer;
+    background: #03A9F4;
+    color: white;
+    border-radius: 3px;
+}
+
+.more:hover {
+    transform: translateY(-2px);
+    box-shadow: -2px 5px 7px #b5b5b5;
+}
+
+.img-parent {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+}

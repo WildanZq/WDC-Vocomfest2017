@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artikel | Smart Gen</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/header.css">
+        <link rel="stylesheet" href="../../css/header-query.css">
+        <link rel="stylesheet" href="../../css/signin.css">
+        <link rel="stylesheet" href="../../css/footer.css">
+        <link rel="stylesheet" href="../../css/font-awesome.css">
+        <link rel="stylesheet" href="../../css/sub.css">
+        <link rel="stylesheet" href="../../css/komen.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="../../images/smartgen.png"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <span class="navIcon" onclick="navShow()"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="search searchK"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+            <div class="modal" id="search">
+                <form>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="navKC" id="navKC">
+                <div class="navK" id="navK">
+                    <span class="navClose" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></span>
+                    <div class="navContainer" id="navContainer">
+                        <a href="../../Artikel/"><h1>Artikel  <i class="fa fa-newspaper-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Galeri/"><h1>Galeri  <i class="fa fa-picture-o" aria-hidden="true"></i></h1></a>
+                        <a href="../../Forum/"><h1>Forum  <i class="fa fa-users" aria-hidden="true"></i></h1></a>
+                        
+                        <div onclick="signInK()" class="signInK">SignIn</div>
+                        
+                        <div class="mediaC">
+                            <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                            <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                        </div>
+                        
+                        <div class="uploadKC">
+                            <a href="../../Create/"><span class="uploadK"><i class="plus fa fa-plus" aria-hidden="true"></i> Create Post</span></a>
+                        </div>
+                    </div>
+                    
+                    <span class="navBack" onclick="closeSignIn()" id="navBack"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                    <div class="signInKC" id="signInKC">
+                        <form method="post" class="signinForm" id="signinFormM">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tabM(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupFormM">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tabM(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navL">
+                <a href="../../Artikel/"><div class="item">Artikel</div></a>
+                <a href="../../Galeri/"><div class="item">Galeri</div></a>
+                <a href="../../Forum/"><div class="item">Forum</div></a>
+            </div>
+            
+            <div class="navR">
+                <div onclick="signIn()" class="item">SignIn</div>
+                <div class="modal" id="signIn">
+                    <div class="signIn">
+                        <div class="tabCont">
+                            <div class="tab tabActive tabLine" onclick="tab(0)">SignIn</div>
+                            <div class="tab" onclick="tab(1)">SignUp</div>
+                        </div>
+                        
+                        <form method="post" class="signinForm" id="signinForm">
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <input class="signinButton" type="submit" value="Masuk">
+                            <a class="signinA" onclick="tab(1)">Buat akun</a>
+                        </form>
+                        
+                        <form method="post" class="signinForm" id="signupForm">
+                            <label>Display Name</label>
+                            <input class="signinInput" type="text" name="displayname" id="displayname" required>
+                            <label>Username</label>
+                            <input class="signinInput" type="text" name="username" id="username" required>
+                            <label>Password</label>
+                            <input class="signinInput" type="password" name="password" id="password" required>
+                            <label>Email</label>
+                            <input class="signinInput" type="email" name="email" id="email" required>
+                            <input class="signinButton" type="submit" value="Daftar">
+                            <a class="signinA" onclick="tab(0)">LogIn</a>
+                        </form>
+                    </div>
+                </div>
+                
+                <a href="../../Create/"><span class="upload">
+                    <i class="plus fa fa-plus" aria-hidden="true"></i> Create Post
+                </span></a>
+                
+                <span class="search"><i class="plus fa fa-search" aria-hidden="true"></i></span>
+                <div class="modal" id="search">
+                    <form>
+                        <input type="text" placeholder="Search" id="searchInput">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="logoC">
+                <a href="../../"><div class="logo"></div></a>
+            </div>
+            
+            <h1 class="desc">Attitude is Everything</h1>
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        
+        <div class="container" id="top">
+            <div class="Aimg" style="background-image: url(../../images/artikel/6.jpg)"></div>
+            <div class="artikel">
+                <h1>Membiasakan Diri Dengan Kata: Tolong, Maaf dan Terimakasih<div class="hLine"></div></h1>
+                <a class="author">Faishal</a>
+                <span class="date">14-03-2017</span>
+                <p>&emsp;Seiring berjalannya waktu ada banyak hal yang telah berubah. Ada yang timbul dan ada yang tenggelam. Banyak sesuatu yang tidak kita mengerti termasuk kosa kata baru yang hadir dengan sendirinya yang kadang kita tidak tahu artinya dan malah terlalu sering kita pakai dalam kehidupan sehari-hari dan justru kosa kata lama yang seharusnya selalu kita pakai, malah kita lupakan. Padahal kalau saja kita sadar arti dan pengaruhnya, banyak kosa kata yang lebih baik untuk selalu kita ucapkan dibanding "Ah baper lo!" yah sebagai contohnya kosa kata Tolong, Maaf dan Terima Kasih.</p>
+                <ol>
+                    <li>‘Terima Kasih’ itu lebih mahal dari uang</li>
+                    <img src="../../images/artikel/6/1.jpg">
+                    <p>&emsp;Uang memang bukan segalanya walaupun segalanya harus dibeli pakai uang. Diluar sana banyak orang yang beranggapan bahwa ketika kita sudah menyerahkan uang, semuanya akan selesai begitu saja. Padahal kan tidak. Contohnya waktu kita belanja, belanja dari barang yang paling murah sampai yang paling mahal, setelah barang diberikan ke kita dan kita memberikan uang pasti ada kalimat Terima Kasih dari penjual atau pembelinya. Terima kasih untuk apa? ya untuk waktu, perlakuan dan ucapan antara penjual dan pembeli.</p>
+                    <p>&emsp;Terima kasih lebih mahal kan dari uang? apa jadinya setelah kita membayar dan menerima barang lalu penjual langsung buang muka dan pergi begitu saja atau mengusir kita untuk segera pulang. Kesel kan pasti, marah apalagi dan pasti nggak akan mau beli di tempat itu lagi.</p>
+                    <p>&emsp;Maka dari itu, jangan abaikan ucapan terima kasih. jangan pernah lupa mengucapkan terima kasih kepada mereka yang telah meluangkan waktu untuk membantu. Ikhlas atau tidak mereka membantu kita itu urusan mereka. Yang terpenting ucapan terima kasih yang kita ucapkan adalah cara menghargai bantuan yang mereka berikan. Tidak perlu uang, karena uang dalam beberapa kasus dapat membuat orang lain malah tersinggung bukan merasa dihargai.</p>
+                    <p>&emsp;Bisa jadi karena ucapan terima kasih, bantuan yang tadinya tidak ikhlas berubah jadi ikhlas kan? Dan bantuan yang ikhlas akan lebih ikhlas lagi.</p> 
+                    <li>‘Maaf’ seribu kali lebih baik dari ‘alah baper banget sih lo’</li>
+                    <img src="../../images/artikel/6/2.jpg">
+                    <p>&emsp;Entah sejak kapan kata-kata baper ini muncul dan darimana dan siapa yang memulainya. Memang benar sejak ada kata baper orang jadi susah minta maaf, kadang udah tahu yang dilakukan atau yang diucapkannya salah, bukannya minta maaf malah kata-kata yang keluar "dasar baper".</p>
+                    <p>&emsp;kita nggak pernah tahu isi hati dan perasaan seseorang dan kita juga nggak bisa selalu menganggap yang keluar dari mulut kita itu benar dan nggak nyakitin beberapa pihak. Secara sadar dan nggak sadar, langsung dan nggak langsung, kadang yang kita pikir benar belum tentu dinilai benar oleh orang lain</p>
+                    <p>&emsp;Padahal menjaga perasaan seseorang itu sangat penting. Ngomong maaf gak sesusah yang dibayangin kok. Jangan pernah gengsi untuk bilang maaf karena kita juga manusia yang punya perasaan untuk dihargai. Bayangin gimana jadinya kalau kita susah bilang maaf dan jarang menghargai perasaan orang lain terus siapa dong yang mau menghargai perasaan kita?</p>
+                    <li>Kalau mau ditolongin, ya bilang: Tolong</li>
+                    <img src="../../images/artikel/6/3.jpg">
+                    <p>&emsp;Semakin dewasa kita akan semakin sadar mana yang baik dan mana yang buruk. mana yang pantas diucapkan dan mana yang tidak. Salah satu cara agar kita bisa dihargai orang lain nantinya ya dengan cara bagaimana kita menghargai orang lain.</p>
+                    <li>Tolong, Maaf dan Terima Kasih. Wujud Menghargai sekaligus Tahu diri</li>
+                    <img src="../../images/artikel/6/4.jpg">
+                    Semakin dewasa kita akan semakin sadar mana yang baik dan mana yang buruk. mana yang pantas diucapkan dan mana yang tidak. Salah satu cara agar kita bisa dihargai orang lain nantinya ya dengan cara bagaimana kita menghargai orang lain.
+                    <li>Gunakan 3 kata itu dan lihat pengaruhnya dalam kehidupan</li>
+                    <img src="../../images/artikel/6/5.png">
+                    <p>&emsp;Mulai sekarang, Mari bersama-sama kita coba untuk tidak lupa menyisipkan kata tolong, maaf dan terima kasih dalam berinteraksi dengan orang-orang disekitar kita. Tolong, Maaf dan Terima Kasih ini saling berkaitan satu sama lain. Tiga kata ini mau diucapkan terpisah dan mau diucapkan tergabung pun maknanya akan sama. Sama-sama cara untuk menghargai.</p>
+                    <p>&emsp;Jadi, jangan lupa untuk berterima kasih, jangan gengsi untuk meminta maaf dan jangan sombong untuk menyisipkan kata Tolong.</p>
+                </ol>
+                <i class="iconL fa fa-heart-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <i class="iconK fa fa-comment-o" aria-hidden="true"></i>
+                <span class="like">237</span>
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-pinterest-p" aria-hidden="true"></i></div>
+                </div>
+                
+                <div id="comment" class="komen">
+                    <h1>Komentar</h1>
+                    <div class="komenForm">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <form action="post">
+                            <textarea name="komen" required></textarea><br>
+                            <input type="submit" value="Kirim">
+                        </form>
+                    </div>
+                    <div class="komenItem">
+                        <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                        <span class="namaK">Mouri Hadyan</span>
+                        <p class="komentar">Wajib saya Share ke teman saya</p>
+                        <a class="balas">Balas</a>
+                        <i class="iconL iconLK fa fa-heart-o" aria-hidden="true"></i>
+                        <span class="like likeK">237</span>
+                        <span class="date dateK">15-03-2017</span>
+                        <div class="balasCS">
+                            <div class="komenItem">
+                                <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                <span class="namaK">Mitsuko Ziaulhaq</span>
+                                <p class="komentar">Saya juga izin share min</p>
+                                <i class="iconL iconLK fa fa-heart-o" aria-hidden="true" style="margin-left: 57px"></i>
+                                <span class="like likeK">237</span>
+                                <span class="date dateK">16-03-2017</span>
+                            </div>
+                            <input type="button" value="Read More  ->" class="more"/>
+                            <div class="balasC">
+                                <div class="komenForm">
+                                    <div class="pp" style="background-image: url(../../images/user/blank.jpg)"></div>
+                                    <form action="post">
+                                        <textarea name="komen" required></textarea><br>
+                                        <input type="submit" value="Kirim">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" value="Read More  ->" class="more"/>
+                    </div>
+                </div>
+            </div>
+            <div class="rekC">
+                <div class="rek">
+                    <h2>Rekomendasi</h2>
+                    <div class="item" onclick="location.href='1.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/1.jpg">
+                        </div>
+                        <h4>15 Kelakuan Beretika Ini Sering Dilakukan, Padahal Salah!</h4>
+                    </div>
+                    <div class="item" onclick="location.href='2.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/2.jpg">
+                        </div>
+                        <h4>Adab Bertamu dan Menerima Tamu</h4>
+                    </div>
+                    <div class="item" onclick="location.href='3.html';">
+                        <div class="img-parent imgC">
+                            <img class="img" src="../../images/artikel/3.jpg">
+                        </div>
+                        <h4>Cara Mudah Meningkatkan Kemampuan Bersosialisasi</h4>
+                    </div>
+                </div>
+            </div>
+            <a class="topA" href="#top">
+                <div class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="container">
+                <div class="mediaC">
+                    <div class="media"><i class="icon fa fa-facebook" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-twitter" aria-hidden="true"></i></div>
+                    <div class="media"><i class="icon fa fa-instagram" aria-hidden="true"></i></div>
+                </div>
+                <p class="copy">Menantu Idaman &copy; 2017</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/img.js"></script>
+<script src="../../js/komen.js"></script>
+<script src="../../js/js.js"></script>
+<script src="script.js"></script>

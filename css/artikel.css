@@ -1,0 +1,180 @@
+/*artikel start*/
+.artikel {
+    width: 100%;
+}
+
+.artikel .container {
+    margin: auto;
+    width: 90%;
+    max-width: 1100px;
+    height: 450px;
+    padding-top: 70px;
+    position: relative;
+}
+
+.articleLine {
+    margin: 25px 0 40px auto;
+    width: 100%;
+    max-width: 400px;
+    border: thin solid #696969;
+}
+
+.artikel .container > h1 {
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    padding: 0 20px 0 20px;
+    background: white;
+    display: table;
+    position: absolute;
+    right: 0;
+    top: 90px;
+}
+
+.artikel .contentC {
+    height: 550px;
+}
+
+.artikel .content {
+    float: right;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: table;
+    overflow-x: visible;
+}
+
+.artikel .content .desc {
+    float: right;
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    height: 75%;
+    width: 70%;
+    background: white;
+    right: 10px;
+    bottom: 3%;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding-bottom: 30px;
+}
+
+.artikel .desc h2, .artikel .desc p {
+    margin: 10px;
+    margin-bottom: 3px;
+}
+
+.artikel .desc h2 {
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.artikel .desc p {
+    margin-top: 0;
+}
+
+.artikel .desc p:nth-child(4) {
+    margin-top: 2px;
+    padding-top: 10px;
+    border-top: thin solid #c4c4c4;
+}
+
+.artikel .desc a, .artikel .desc h2, .artikel .desc p {
+    margin-left: 15px;
+}
+
+.artikel .desc .date {
+    float: right;
+    margin-right: 15px;
+    color: #747474;
+}
+
+.artikel .c1 .desc {
+    margin-top: -33.7%;
+}
+
+.artikel .content:hover .desc {
+    margin-right: -5px;
+}
+
+.artikel .content:hover .img {
+    margin-left: -10px;
+}
+
+.artikel .content .img {
+    margin-left: 10px;
+    height: 100%;
+    width: 80%;
+    background-size: cover;
+}
+
+.artikel .c1 {
+    width: 53%;
+    height: 40%;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.artikel .c2 {
+    width: 25.645%;
+    height: 56%;
+    margin-left: 15px;
+}
+
+.artikel .c21 {
+    margin-right: 15px;
+}
+
+.artikel .c3 {
+    width: 44%;
+    height: 99%;
+}
+
+.artikel .desc .gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, 1));
+}
+
+.artikel .likeC {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.artikel .likeC span {
+    color: #969696;
+}
+
+.artikel .likeC .iconL {
+    color: red;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.artikel .desc .mediaC {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.artikel .mediaC .media {
+    height: 30px;
+    width: 30px;
+    background: black;
+    display: inline-block;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.artikel .media .icon {
+    display: block;
+    margin-top: 6px;
+    font-size: 1.2em;
+    text-align: center;
+}
+/*artikel end*/
