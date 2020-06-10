@@ -14,7 +14,7 @@
 }
 
 .posterLine {
-    margin: 25px 0 40px auto;
+    margin: 25px auto 40px auto;
     width: 100%;
     max-width: 400px;
     border: thin solid #696969;
@@ -24,7 +24,8 @@
     cursor: pointer;
     position: absolute;
     top: 70px;
-    right: 0;
+    transform: translateX(-50%);
+    left: 50%;
     background: white;
     padding: 0 20px;
 }
